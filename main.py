@@ -17,5 +17,8 @@ service = st.selectbox(
 
 if service == "Licences":
   st.header("Automated Licences Review 🔎")
-  st.write("Charge your documents")
+  st.text("Prepare and charge your documents")
+  with st.form("licence_review"):
+         st.subheader('Land 🗺️') 
+  
   
