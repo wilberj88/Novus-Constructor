@@ -1,5 +1,6 @@
 import streamlit as st
-from streamlit_extras.let_it_rain import rain 
+import pandas as pd
+from io import StringIO
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="Novus Constructor", page_icon="🏗️")
@@ -26,49 +27,35 @@ if service == "Licences":
         2. Taxes Certificate
         3. Contract of Sale
         """)
-        uploaded_files = st.file_uploader(
+        uploaded_files1 = st.file_uploader(
             "Charge the 3 documents here:", accept_multiple_files=True
         )
         
-        if uploaded_files:
-            for uploaded_file in uploaded_files:
+        if uploaded_files1:
+            for uploaded_file in uploaded_files1:
                 bytes_data = uploaded_file.read()
                 st.write("filename:", uploaded_file.name)
                 st.write(bytes_data)
 
-        st.subheader('Constructor 👷')
+        st.subheader('Profesionals 👷')
         st.text("""
-        1. Professional Certificate
+        1. Constructor Certificate 🏗️
+        2. Topographic Survey ⛰️
+        3. Structural Analysis 🏛️
+        4. Architecture Design 🏛️
+        5. Hydrosanitary Report 💦
+        6. Electric Report ⚡
+        7. No Structural Report 🧱
         """)
 
-        st.subheader('Topography ⛰️')
-        st.text("""
-        1. Topographic Survey
-        """)
-
-        st.subheader('Structural 🏛️')
-        st.text("""
-        1. Structural Analysis
-        """)
-
-        st.subheader('Architecture 🏛️')
-        st.text("""
-        1. Architecture Design
-        """)
-
-        st.subheader('Hydrosanitary ware 💦')
-        st.text("""
-        1. Hydrosanitary Report
-        """)
-            
-        st.subheader('Electric ⚡')
-        st.text("""
-        1. Electric Report
-        """)
-
-        st.subheader('No Structural 🧱')
-        st.text("""
-        1. No Structural Report
-        """)
+        uploaded_files2 = st.file_uploader(
+            "Charge the 7 documents here:", accept_multiple_files=True
+        )
+        
+        if uploaded_files2:
+            for uploaded_file in uploaded_files2:
+                bytes_data1 = uploaded_file.read()
+                st.write("filename:", uploaded_file.name)
+                st.write(bytes_data1)
             
         submitted = st.form_submit_button("Submit")
