@@ -21,24 +21,13 @@ if service == "Licences":
     st.header("Automated Licences Review 🔎")
     st.text("Prepare and charge your documents")
     with st.form("licence_review"):
-        st.subheader('Land 🗺️')
+        st.subheader('Registry 🗺️')
         st.text("""
+        **Land Documents**
         1. Asset Certificate
         2. Taxes Certificate
         3. Contract of Sale
-        """)
-        uploaded_files1 = st.file_uploader(
-            "Charge the 3 documents here:", accept_multiple_files=True
-        )
-        
-        if uploaded_files1:
-            for uploaded_file in uploaded_files1:
-                bytes_data = uploaded_file.read()
-                st.write("filename:", uploaded_file.name)
-                st.write(bytes_data)
-
-        st.subheader('Profesionals 👷')
-        st.text("""
+        ***Professionals Documments***
         1. Constructor Certificate 🏗️
         2. Topographic Survey ⛰️
         3. Structural Analysis 🏛️
@@ -47,18 +36,17 @@ if service == "Licences":
         6. Electric Report ⚡
         7. No Structural Report 🧱
         """)
-
-        uploaded_files2 = st.file_uploader(
-            "Charge the 7 documents here:", accept_multiple_files=True
+        uploaded_files1 = st.file_uploader(
+            "Charge the 10 documents here:", accept_multiple_files=True
         )
         
-        if uploaded_files2:
-            for uploaded_file in uploaded_files2:
-                bytes_data1 = uploaded_file.read()
+        if uploaded_files1:
+            for uploaded_file in uploaded_files1:
+                bytes_data = uploaded_file.read()
                 st.write("filename:", uploaded_file.name)
-                st.write(bytes_data1)
+                st.write(bytes_data)
         
         def registry_message(): 
             st.write('Your Registry is Done')
             
-        submitted = st.form_submit_button("Registry", on_click=registry_message)
+        submitted = st.form_submit_button("Submit Registry", on_click=registry_message)
