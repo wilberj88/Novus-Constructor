@@ -57,5 +57,7 @@ if service == "Licences":
                 bytes_data1 = uploaded_file.read()
                 st.write("filename:", uploaded_file.name)
                 st.write(bytes_data1)
+        
+        registry_message = st.writee('Your Registry is Done')
             
-        submitted = st.form_submit_button("Submit")
+        submitted = st.form_submit_button("Registry", on_click=registry_message)
