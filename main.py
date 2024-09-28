@@ -11,27 +11,29 @@ st.write('---')
 
 service = st.selectbox(
         "Which service do you prefer?",
-        ("Licences", "Expert Report"),index=None,
-    placeholder="Select an automated service, you just need your documents to charge..."
+        ("Licences", "Expert Report"),
+        index=0,
+        placeholder="Select an automated service, you just need your documents to charge..."
     )
 
 if service == "Licences":
-  st.header("Automated Licences Review 🔎")
-  st.text("Prepare and charge your documents")
-  with st.form("licence_review"):
-         st.subheader('Land 🗺️')
-         st.text("""
-         1. Asset Certificate
-         2. Taxes Certificate
-         3. Contract of Sale
-         """)
-         uploaded_files = st.file_uploader(
+    st.header("Automated Licences Review 🔎")
+    st.text("Prepare and charge your documents")
+    with st.form("licence_review"):
+        st.subheader('Land 🗺️')
+        st.text("""
+        1. Asset Certificate
+        2. Taxes Certificate
+        3. Contract of Sale
+        """)
+        uploaded_files = st.file_uploader(
             "Charge the 3 documents here:", accept_multiple_files=True
         )
-        for uploaded_file in uploaded_files:
-              bytes_data = uploaded_file.read()
-              st.write("filename:", uploaded_file.name)
-              st.write(bytes_data)
-         submitted = st.form_submit_button("Submit")
-  
-  
+        
+        if uploaded_files:
+            for uploaded_file in uploaded_files:
+                bytes_data = uploaded_file.read()
+                st.write("filename:", uploaded_file.name)
+                st.write(bytes_data)
+        
+        submitted = st.form_submit_button("Submit")
