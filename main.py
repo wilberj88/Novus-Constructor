@@ -47,13 +47,9 @@ if service == "Licences":
                 st.write("filename:", uploaded_file.name)
                 st.write(bytes_data)
         
-        def registry_message(): 
-            st.write('Your Registry is Done')
-            
-        submitted = st.form_submit_button("Submit Registry", on_click=registry_message)
+        
 
-
-with st.form("process"):
+    with st.form("process"):
         st.subheader('Licence Process ⚙️')
         st.write("""
         **Project Documents**
@@ -65,7 +61,7 @@ with st.form("process"):
         7. No Structural Report 🧱
         """)
         uploaded_files1 = st.file_uploader(
-            "Charge the 10 documents here:", accept_multiple_files=True
+            "Charge the 7 documents here:", accept_multiple_files=True
         )
         
         if uploaded_files2:
@@ -74,5 +70,6 @@ with st.form("process"):
                 st.write("filename:", uploaded_file.name)
                 st.write(bytes_data1)
         
-        submitted1 = st.form_submit_button("Activate Process")
+
+    submitted = st.form_submit_button("Submit Registry", on_click=registry_message)
 
