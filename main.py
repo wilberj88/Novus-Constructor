@@ -29,13 +29,13 @@ if service == "Licences":
         3. Contract of Sale
 
         **Professionals Documents**
-        1. Constructor Company Certificate 🏗️
-        2. Topographic Company ⛰️
-        3. Structural Company 🏛️
-        4. Architecture Company 🏛️
-        5. Hydrosanitary Company 💦
-        6. Electric Company ⚡
-        7. No Structural Company 🧱
+        1. Constructor Manager 🏗️
+        2. Topographic Manager ⛰️
+        3. Structural Manager 🏛️
+        4. Architecture Manager 🏛️
+        5. Hydrosanitary Manager 💦
+        6. Electric Manager ⚡
+        7. No Structural Manager 🧱
 
         **Project Documents**
         1. Topographic Survey ⛰️
