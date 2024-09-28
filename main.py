@@ -19,6 +19,7 @@ if service == "Licences":
   st.header("Automated Licences Review 🔎")
   st.text("Prepare and charge your documents")
   with st.form("licence_review"):
-         st.subheader('Land 🗺️') 
+         st.subheader('Land 🗺️')
+         submitted = st.form_submit_button("Submit")
   
   
