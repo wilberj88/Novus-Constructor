@@ -60,6 +60,8 @@ if service == "Licences":
         if submitted:
                 st.write("""
                 **Your project is now in review** 🤖⏰🧠
-                In just 3 days you will recive our Final Report with % of Compliance & Recommendations to achive 100% for License Aprobation
+                In just 3 days you will recive our Final Report with: 
+                **% of Compliance for License Aprobation with current documments **
+                **List of tasks to achive 100% compliance for License Aprobation**
                 """)
 
