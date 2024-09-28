@@ -21,7 +21,7 @@ if service == "Licences":
     st.header("Automated Licences Review 🔎")
     st.text("Prepare and charge your documents")
     with st.form("registry"):
-        st.subheader('Registry 🗺️')
+        st.subheader('Registry & Activation Process 📝⚙️')
         st.write("""
         **Land Documents**
         1. Asset Certificate
@@ -36,9 +36,18 @@ if service == "Licences":
         5. Hydrosanitary Company 💦
         6. Electric Company ⚡
         7. No Structural Company 🧱
+
+        **Project Documents**
+        1. Topographic Survey ⛰️
+        2. Structural Analysis 🏛️
+        3. Architecture Design 🏛️
+        5. Hydrosanitary Report 💦
+        6. Electric Report ⚡
+        7. No Structural Report 🧱
+        
         """)
         uploaded_files1 = st.file_uploader(
-            "Charge the 10 documents here:", accept_multiple_files=True
+            "Charge the 17 documents here:", accept_multiple_files=True
         )
         
         if uploaded_files1:
@@ -48,28 +57,5 @@ if service == "Licences":
                 st.write(bytes_data)
         
         
-
-    with st.form("process"):
-        st.subheader('Licence Process ⚙️')
-        st.write("""
-        **Project Documents**
-        1. Topographic Survey ⛰️
-        2. Structural Analysis 🏛️
-        3. Architecture Design 🏛️
-        5. Hydrosanitary Report 💦
-        6. Electric Report ⚡
-        7. No Structural Report 🧱
-        """)
-        uploaded_files1 = st.file_uploader(
-            "Charge the 7 documents here:", accept_multiple_files=True
-        )
-        
-        if uploaded_files2:
-            for uploaded_file in uploaded_files2:
-                bytes_data1 = uploaded_file.read()
-                st.write("filename:", uploaded_file.name)
-                st.write(bytes_data1)
-        
-
     submitted = st.form_submit_button("Submit Registry", on_click=registry_message)
 
