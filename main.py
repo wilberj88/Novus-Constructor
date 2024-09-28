@@ -56,10 +56,10 @@ if service == "Licences":
                 st.write("filename:", uploaded_file.name)
                 st.write(bytes_data)
         
-    submitted = st.form_submit_button("Activate License Review RIGTH NOW")
-    if submitted:
-        st.write("""
-        **Your project is now in review** 🤖⏰🧠
-        In just 3 days you will recive our Final Report with % of Compliance & Recommendations to achive 100% for License Aprobation
-        """)
+        submitted = st.form_submit_button("Activate License Review RIGTH NOW")
+        if submitted:
+                st.write("""
+                **Your project is now in review** 🤖⏰🧠
+                In just 3 days you will recive our Final Report with % of Compliance & Recommendations to achive 100% for License Aprobation
+                """)
 
