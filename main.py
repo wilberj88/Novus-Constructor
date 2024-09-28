@@ -12,7 +12,7 @@ st.write('---')
 service = st.selectbox(
         "Which service do you prefer?",
         ("Licences", "Expert Report"),
-        index=0,
+        index=None,
         placeholder="Select an automated service, you just need your documents to charge..."
     )
 
