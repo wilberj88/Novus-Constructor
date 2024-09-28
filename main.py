@@ -20,7 +20,7 @@ service = st.selectbox(
 if service == "Licences":
     st.header("Automated Licences Review 🔎")
     st.text("Prepare and charge your documents")
-    with st.form("licence_review"):
+    with st.form("registry"):
         st.subheader('Registry 🗺️')
         st.write("""
         **Land Documents**
@@ -29,13 +29,13 @@ if service == "Licences":
         3. Contract of Sale
 
         **Professionals Documments**
-        1. Constructor Certificate 🏗️
-        2. Topographic Survey ⛰️
-        3. Structural Analysis 🏛️
-        4. Architecture Design 🏛️
-        5. Hydrosanitary Report 💦
-        6. Electric Report ⚡
-        7. No Structural Report 🧱
+        1. Constructor Company Certificate 🏗️
+        2. Topographic Company ⛰️
+        3. Structural Company 🏛️
+        4. Architecture Company 🏛️
+        5. Hydrosanitary Company 💦
+        6. Electric Company ⚡
+        7. No Structural Company 🧱
         """)
         uploaded_files1 = st.file_uploader(
             "Charge the 10 documents here:", accept_multiple_files=True
@@ -51,3 +51,28 @@ if service == "Licences":
             st.write('Your Registry is Done')
             
         submitted = st.form_submit_button("Submit Registry", on_click=registry_message)
+
+
+with st.form("process"):
+        st.subheader('Licence Process ⚙️')
+        st.write("""
+        **Project Documents**
+        1. Topographic Survey ⛰️
+        2. Structural Analysis 🏛️
+        3. Architecture Design 🏛️
+        5. Hydrosanitary Report 💦
+        6. Electric Report ⚡
+        7. No Structural Report 🧱
+        """)
+        uploaded_files1 = st.file_uploader(
+            "Charge the 10 documents here:", accept_multiple_files=True
+        )
+        
+        if uploaded_files2:
+            for uploaded_file in uploaded_files2:
+                bytes_data1 = uploaded_file.read()
+                st.write("filename:", uploaded_file.name)
+                st.write(bytes_data1)
+        
+        submitted1 = st.form_submit_button("Activate Process")
+
