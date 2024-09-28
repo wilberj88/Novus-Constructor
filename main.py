@@ -22,7 +22,7 @@ if service == "Licences":
     st.text("Prepare and charge your documents")
     with st.form("licence_review"):
         st.subheader('Registry 🗺️')
-        st.text("""
+        st.write("""
         **Land Documents**
         1. Asset Certificate
         2. Taxes Certificate
