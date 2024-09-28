@@ -28,7 +28,7 @@ if service == "Licences":
         2. Taxes Certificate
         3. Contract of Sale
 
-        **Professionals Documments**
+        **Professionals Documents**
         1. Constructor Company Certificate 🏗️
         2. Topographic Company ⛰️
         3. Structural Company 🏛️
@@ -56,6 +56,10 @@ if service == "Licences":
                 st.write("filename:", uploaded_file.name)
                 st.write(bytes_data)
         
-        
-    submitted = st.form_submit_button("Submit Registry", on_click=registry_message)
+    submitted = st.form_submit_button("Activate License Review RIGTH NOW")
+    if submitted:
+        st.write("""
+        **Your project is now in review** 🤖⏰🧠
+        In just 3 days you will recive our Final Report with % of Compliance & Recommendations to achive 100% for License Aprobation
+        """)
 
