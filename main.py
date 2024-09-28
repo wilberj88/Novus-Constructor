@@ -16,6 +16,6 @@ service = st.selectbox(
     )
 
 if service == "Licences":
-  st.header("Novus Constructor 🏗️")
+  st.header("Automated Licences Review 🔎")
   st.write("Charge your documents")
   
