@@ -6,7 +6,7 @@ st.set_page_config(layout="wide", page_title="Novus Constructor", page_icon="�
 
 st.title('Novus Constructor 🏗️')
 st.header('⚙️ · 🤖 Automated Cycle · 🦾 · 🛠️')
-
+st.subheader("Say goodbye to high costs 💲 and long times ⏰")
 st.write('---')
 
 service = st.selectbox(
@@ -17,6 +17,5 @@ service = st.selectbox(
 
 if service == "Licences":
   st.header("Novus Constructor 🏗️")
-  st.subheader("Say goodbye to high costs 💲 and long times ⏰")
   st.write("Charge your documents")
   
